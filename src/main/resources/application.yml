@@ -1,0 +1,14 @@
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+      base-path: /monitor
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  metrics:
+    export:
+      prometheus:
+        enabled: true
