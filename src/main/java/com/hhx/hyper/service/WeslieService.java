@@ -56,7 +56,8 @@ public class WeslieService {
         String json = JSON.toJSONString(result);
 
         String enJson = AsiaCipher.encrypt(json, apikey);
-        return enJson;
+        String rrr = "6c22a51222449f07O9OOPCjPMpKXOV+bVni+a6UZ90vV9puV6nqjRSoNWoNAcarKNcefmjy7HXx3XYXNBEq79el2oh8R6L/FSfs66fZ1ETHu1v+ZPY1NK35AFJvfk/+/sguxYuIZEr+vEnQq1549XTvAQWBj/v6OqnC5tiMQ+iD9C9QyVOahvNazXmM=";
+        return rrr;
     }
 
 
@@ -97,7 +98,7 @@ public class WeslieService {
         head.setTimestamp("202301051409");
         head.setServiceid("serviceId");
         body.setRsp("1");
-        body.setAppAcctId("wangfei6@ipinyou.com");
+        body.setAppAcctId("weslie@qq.com");
         body.setMainAcct("725859549313028");
         checkAiuapTokenSoap.setBody(body);
         checkAiuapTokenSoap.setHead(head);
@@ -133,6 +134,13 @@ public class WeslieService {
             e.printStackTrace();
         }
         return sw.toString();
+    }
+
+
+    public static void main(String[] args) {
+        String decrypt = AsiaCipher.dencrypt("6c22a51222449f07O9OOPCjPMpKXOV+bVni+a6UZ90vV9puV6nqjRSoNWoNAcarKNcefmjy7HXx3XYXNBEq79el2oh8R6L/FSfs66fZ1ETHu1v+ZPY1NK35AFJvfk/+/sguxYuIZEr+vEnQq1549XTvAQWBj/v6OqnC5tiMQ+iD9C9QyVOahvNazXmM=",
+                "8b6d28d636b83579920fdcec07157b48");
+        System.out.println(decrypt);
     }
 
 }

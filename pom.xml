@@ -104,7 +104,10 @@
 					<!--  scope为system的 maven打包默认是不打进jar包进去的  -->
 					<!--  解决本地jar包 打不进jar的问题  -->
 					<includeSystemScope>true</includeSystemScope>
-
+					<!--  Maven打包跳过test  -->
+					<!--  -Dmaven.test.skip=true，不但跳过单元测试的运行，也跳过测试代码的编译  -->
+					<!--  -DskipTests=true 跳过单元测试，但是会继续编译。  -->
+					<skip>true</skip>
 					<excludes>
 						<exclude>
 							<groupId>org.projectlombok</groupId>
